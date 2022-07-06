@@ -1,0 +1,13 @@
+# opta.yaml
+name: scoil-mark-7 # name of the environment
+org_name: myspotontheweb # A unique identifier for your organization
+providers:
+  azurerm:
+    location: westeurope
+    tenant_id: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX  # your Azure tenant id
+    subscription_id: YYYYYYYY-YYYY-YYYY-YYYY-YYYYYYYYYYYY # your Azure subscription id
+modules:
+    - type: base
+    - type: k8s-cluster
+    - type: k8s-base
+
