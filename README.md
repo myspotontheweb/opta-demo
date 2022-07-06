@@ -21,9 +21,16 @@ Generate the Terraform code and create the remote backend (using an Azure storag
 
     make terraform state-store
     
-Run terraform as follows
+Use make to retrieve the access key that is required by terraform
+
+    $ make key
+    export ARM_ACCESS_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXX
+    
+Run terraform as follows:
 
     cd terraform
+
+    export ARM_ACCESS_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXX
     terraform init
     
     terraform plan -compact-warnings -lock=false -input=false -out=tf.plan -target=module.base
