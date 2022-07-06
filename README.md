@@ -15,6 +15,8 @@ Need the following tools installed
 
 # Usage
 
+Edit the [opta.yaml](opta.yaml#L7-L8) file an fill in the Azure Tenant + Subscription IDs
+
 Generate the Terraform code and create the remote backend (using an Azure storage account)
 
     make terraform state-store
