@@ -15,7 +15,13 @@ Need the following tools installed
 
 # Usage
 
-Edit the [opta.yaml](opta.yaml#L7-L8) file an fill in the Azure Tenant + Subscription IDs
+Edit the [opta.yaml](opta.yaml#L7-L8) file an fill in the Azure Tenant + Subscription IDs. The following command can help obtain these settings
+
+    $ az account list | jq '.[]|select(.name=="<subscription name>")|{"subscription_id":.id,"tenant_id":.tenantId}'
+    {
+      "subscription_id": "XXXX-XXXX-XXXX-XXXX-XXXX",
+      "tenant_id": "YYYY-YYYY-YYYY-YYYY-YYYY"
+    }
 
 Generate the Terraform code and create the remote backend (using an Azure storage account)
 
