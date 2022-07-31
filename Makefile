@@ -22,6 +22,7 @@ key:
 clean:
 	rm -rf terraform
 	rm -f main.tf.json
+	rm -f opta_crash_report.zip
 
 purge:
 	az group delete --resource-group $(RESOURCE_GROUP_NAME) --subscription $(SUBSCRIPTION_ID) --no-wait
